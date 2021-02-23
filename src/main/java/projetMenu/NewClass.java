@@ -1,5 +1,5 @@
 
-package com.mycompany.projectmenu;
+package projetMenu;
 
 /**
  *
@@ -7,10 +7,8 @@ package com.mycompany.projectmenu;
  */
 public class NewClass {
 public static void main (String[] args){
-    System.out.println("Hello gitHub");
-  
     
-    //Altere test
+    
     
     
 }}
