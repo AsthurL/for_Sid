@@ -24,21 +24,33 @@ public class studentRecurse implements Comparable<studentRecurse>{
     private Double average = (semester1 + semester2) / 2;
     private Double sumAverage = (semester1 + semester2) / 2; */
 		
-    private String name;
-    private String course;
-    private Double semester1;
-    private Double semester2; 
-    private Double highNote;
-    private Integer id, order;
-    private Double average;
+    private static String name;
+    private static String course;
+    private static Double semester1;
+    private static Double semester2; 
+    private static Double highNote;
+    private static Integer id, order;
+    private static Double average;
    // private Double sumAverage = (double) 0;
+
+    public void setHighNote(Double highNote) {
+        this.highNote = highNote;
+    }
+
+    public void setOrder(Integer order) {
+        this.order = order;
+    }
+
+    public void setAverage(Double average) {
+        this.average = average;
+    }
    
     //public static double geralAverage (ArrayList<studentRecurse> student) {
 	//	return sumAverage / student.size();}
     
-    public void  average (){average = (semester1 + semester2) / 2;}
-    public void highNote (){
-    if(semester1 > semester2){highNote = semester1;} else{highNote = semester2;};}
+    public static Double  average (Double semester1, Double semester2){return average = (semester1 + semester2) / 2;}
+    public static Double highNote (Double semester1, Double semester2){
+    if(semester1 > semester2){return highNote = semester1;} else{return highNote = semester2;}}
     
     
     
@@ -46,8 +58,8 @@ public class studentRecurse implements Comparable<studentRecurse>{
     public studentRecurse(Integer id, String name, String course, Double semester1, Double semester2) {
 		this.name = name;
 		this.course = course;
-		this.semester1 = semester1;
-		this.semester2 = semester2;
+		this.semester1 = (double) semester1;
+		this.semester2 = (double) semester2;
 		this.id = id;
                 average = this.average;
                 highNote = this.highNote;

@@ -109,7 +109,9 @@ public static void main (String[] args){
          System.out.print("NOTA SEGUNDO SEMESTRE: ");
          System.out.println("");
             student.get(idConference).setSemester2(sc.nextDouble());
-                break;
+            student.get(idConference).setHighNote(studentRecurse.highNote(student.get(idConference).getSemester1(), student.get(idConference).getSemester2()));
+          student.get(idConference).setHighNote(studentRecurse.average(student.get(idConference).getSemester1(), student.get(idConference).getSemester2()));
+            break;
         }
         
     break;
