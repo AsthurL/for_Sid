@@ -71,12 +71,12 @@ public class referenceMain {
 			String course = sc.nextLine();
 			System.out.println("Nota do primeiro semestre:");
 			Double semester1 = sc.nextDouble();
-			while (0 >= semester1 && 10 <= semester1) {
+			while (semester1 < -1 && semester1 > 11) {
 				System.out.println("Noda do primeiro semestre não econtra-se entre 0 e 10! DIGITE NOVAMENTE: ");
 				semester1 = sc.nextDouble();}
 			System.out.println("Nota do segundo semestre:");
 			Double semester2 = sc.nextDouble();
-			while (0 >= semester2 && 10 <= semester2) {
+			while (semester2 < -1 && semester2 > 11) {
 				System.out.println("Noda do segundo semestre não econtra-se entre 0 e 10! DIGITE NOVAMENTE: ");
 				semester2 = sc.nextDouble();}
 			student.add(new Student(id, name, course, semester1, semester2));}
